@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { ref, computed, onMounted } from 'vue';
 import ProjectCard from './ProjectCard.vue';
-import { ExternalLink, Github, X } from 'lucide-vue-next';
+import { ExternalLink, Github, Play, X } from 'lucide-vue-next';
 import type { Project, ProjectCategory } from '../project.model';
 import { projectService } from '../project.service';
 import { useModal } from '@/composables/useModal';
@@ -116,6 +116,9 @@ const closeModal = () => {
               <div class="modal-actions">
                 <a v-if="selectedProject?.demoUrl" :href="selectedProject.demoUrl" target="_blank" class="btn btn-primary">
                   <ExternalLink class="icon-sm" /> Ver Proyecto
+                </a>
+                <a v-if="selectedProject?.videoUrl" :href="selectedProject.videoUrl" target="_blank" class="btn btn-video">
+                  <Play class="icon-sm" /> Ver Video
                 </a>
                 <a v-if="selectedProject?.githubUrl" :href="selectedProject.githubUrl" target="_blank" class="btn btn-outline">
                   <Github class="icon-sm" /> Código Fuente
@@ -344,6 +347,19 @@ const closeModal = () => {
 
 .btn-outline:hover {
   border-color: var(--text-main);
+}
+
+.btn-video {
+  background-color: rgba(239, 68, 68, 0.15);
+  color: #f87171;
+  border: 1px solid rgba(239, 68, 68, 0.35);
+}
+
+.btn-video:hover {
+  background-color: #ef4444;
+  color: #ffffff;
+  border-color: #ef4444;
+  box-shadow: 0 4px 14px rgba(239, 68, 68, 0.35);
 }
 
 .icon-sm {

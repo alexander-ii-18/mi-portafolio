@@ -14,7 +14,8 @@ export const projectRepository = {
         description: 'Plataforma integral e-commerce y logistica para gestion de ventas e inventarios. Integra un modulo de call center utilizando la API oficial de WhatsApp Business y un agente inteligente para automatizar la asignacion de pedidos y comisiones en ciclos de 24 horas.',
         technologies: ['Laravel', 'Vue.js', 'MySQL', 'WhatsApp API', 'Principios SOLID'],
         image: imgTerry,
-        demoUrl: 'https://front-terry-out-production-5ac8.up.railway.app/'
+        demoUrl: 'https://front-terry-out-production-5ac8.up.railway.app/',
+        videoUrl: '/Sistema CRM.mp4'
       },
       {
         id: 2,
@@ -24,7 +25,8 @@ export const projectRepository = {
         description: 'Sistema de rastreo y sincronizacion automatica de ordenes en tiempo real. Gestiona paqueteria integrando la API de Shalom y la API de Eva bajo una arquitectura distribuida en la nube.',
         technologies: ['Node.js', 'Shalom API', 'Eva API', 'Railway', 'Hetzner'],
         image: imgSeguimiento,
-        demoUrl: 'https://front-terry-out-production-5ac8.up.railway.app/track/OWNZIEXV'
+        demoUrl: 'https://front-terry-out-production-5ac8.up.railway.app/track/OWNZIEXV',
+        videoUrl: '/Seguimiento CRM.mp4'
       },
       {
         id: 3,

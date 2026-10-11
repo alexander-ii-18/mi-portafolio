@@ -32,17 +32,14 @@ defineEmits<{
         class="card-image"
         loading="lazy"
       />
-      <!-- Overlay con gradiente -->
+      
       <div class="card-overlay"></div>
 
-      <!-- Badge de tipo -->
       <span class="type-badge">{{ experience.type }}</span>
 
-      <!-- Indicador "click para ver más" -->
       <span class="view-more-hint">Ver detalles →</span>
     </div>
 
-    <!-- Contenido de la tarjeta -->
     <div class="card-body">
       <div class="card-meta">
         <span class="card-period">

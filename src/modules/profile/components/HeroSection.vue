@@ -30,7 +30,7 @@ const displayName = computed(() => {
 
         <div class="actions">
           <a href="#projects" class="btn btn-primary">Ver Proyectos</a>
-          <a href="/CV-Alexander-Covenas.pdf" target="_blank" download="CV-Alexander-Covenas.pdf"
+          <a href="/public/CV-Alexander Coveñas Domador.pdf" target="_blank" download="CV-Alexander-Covenas.pdf"
             class="btn btn-outline" aria-label="Descargar CV de Alexander Coveñas">
             <Download class="icon" /> Descargar CV
           </a>

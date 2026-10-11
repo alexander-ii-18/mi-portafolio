@@ -10,5 +10,6 @@ export interface Project {
   categoryLabel?: string;
   demoUrl?: string;
   githubUrl?: string;
+  videoUrl?: string;
 }
 

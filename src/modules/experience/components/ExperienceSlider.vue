@@ -7,19 +7,15 @@ import ExperienceCard from './ExperienceCard.vue';
 import { useModal } from '@/composables/useModal';
 import { useScrollLock } from '@/composables/useScrollLock';
 
-// ─── Datos ────────────────────────────────────────────
 const experiences = ref<Experience[]>([]);
 onMounted(async () => {
   experiences.value = await experienceService.fetchExperiences();
-  // Esperamos a que Vue renderice las cards antes de calcular
   await nextTick();
 });
 
-// ─── Slider (scroll-based) ────────────────────────────
 const viewport = ref<HTMLElement | null>(null);
 const currentIndex = ref(0);
 
-/** Número de tarjetas visibles por ancho de pantalla */
 const visibleCount = ref(1);
 const updateVisibleCount = () => {
   if (window.innerWidth >= 1024)     visibleCount.value = 3;
@@ -41,12 +37,10 @@ const maxIndex = computed(() =>
 const canPrev = computed(() => currentIndex.value > 0);
 const canNext = computed(() => currentIndex.value < maxIndex.value);
 
-/** Obtiene el ancho real de una tarjeta desde el DOM */
 const getCardScrollWidth = (): number => {
   if (!viewport.value) return 0;
   const firstCard = viewport.value.querySelector<HTMLElement>('.exp-card-wrap');
   if (!firstCard) return 0;
-  // offsetWidth de la tarjeta + su margen derecho (gap)
   const style = window.getComputedStyle(firstCard);
   const gap = parseFloat(style.marginRight) || 24;
   return firstCard.offsetWidth + gap;
@@ -64,7 +58,6 @@ const slidePrev = () => { if (canPrev.value) scrollToIndex(currentIndex.value - 
 const slideNext = () => { if (canNext.value) scrollToIndex(currentIndex.value + 1); };
 const goTo    = (i: number) => scrollToIndex(i);
 
-// Sincronizar índice al hacer scroll manual (swipe táctil)
 const onViewportScroll = () => {
   if (!viewport.value) return;
   const cardW = getCardScrollWidth();
@@ -73,7 +66,6 @@ const onViewportScroll = () => {
   }
 };
 
-// ─── Modal ────────────────────────────────────────────
 const { isOpen: isModalOpen, selected: selectedExp, open, close } = useModal<Experience>();
 const { lock, unlock } = useScrollLock();
 

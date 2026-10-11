@@ -52,7 +52,7 @@ onUnmounted(() => window.removeEventListener('scroll', handleScroll));
 
       <!-- CTA escritorio -->
       <a
-        href="/CV-Alexander-Covenas.pdf"
+        href="/public/CV-Alexander Coveñas Domador.pdf"
         download
         class="navbar-cta"
         aria-label="Descargar CV"

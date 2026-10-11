@@ -10,7 +10,7 @@ export const experienceRepository = {
         period: 'Nov 2025 - Ago 2026',
         location: 'Piura, Perú',
         description: 'Responsable del ciclo de vida completo de desarrollo web, desde el diseño de la arquitectura hasta el despliegue en producción.',
-        image: 'https://placehold.co/800x450/0f172a/10b981?text=Cunej+%7C+Full-Stack',
+        image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcToeRUzYnSoicliYDTFMdxUmVjgSoQzkvMlSGwnRUl5hpH6W-CCf62kq8g&s=10',
         accentColor: '#10b981',
         type: 'Full-time',
         achievements: [
